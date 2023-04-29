@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0 0;
+            background: #98D8AA;
+        }
+        .logo{
+            margin-left: 30px;
+            flex-grow:1 ;
+        }
+        .logo-img{
+            width: 110px;
+            height: 100px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+        }
+        .team-details{
+            margin-right: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .link{
+            margin-left: 50px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 160%;
+            /* identical to box height, or 32px */
+            letter-spacing: 0.11em;
+            color: black;
+            cursor: pointer;
+            margin-right: 30px;
+            transition: all;
+            transition-duration: 0.7s;
+            border-radius: 10px;
+            padding: 10px 20px;
+            transition-timing-function: ease-in;
+
+        }
+        a:link {
+            text-decoration: none;
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        .link:hover {
+            background: #F7D060;
+        }
+
+        .main-intro{
+            margin: 10px 40px;
+        }
+
+        .main-intro-text{
+            
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 130%;
+            /* identical to box height, or 72px */
+            text-align: center;
+            text-transform: capitalize;
+            transition-timing-function: ease-in;
+            color: black;
+            margin-bottom: 20px;
+        }
+        /* .main-intro-text:hover{
+            text-decoration: underline;
+        } */
+        .main-intro-desc{
+            
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 160%;
+            /* identical to box height, or 72px */
+            text-align: center;
+            text-transform: capitalize;
+
+            color: rgb(58, 56, 56);
+        }
+
+        .form-sec{
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: center;
+            margin: 30px 50px;
+            padding: 10px 0;
+            /* border: 1px solid black; */
+            border-radius: 20px;
+            background: rgba(237, 237, 237, 0.3);
+            padding-bottom: 20px;
+        }
+
+        .form-label {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 146%;
+            /* or 29px */
+
+            text-transform: capitalize;
+        }
+
+        .form-element{
+            margin-top: 10px;
+        }
+        .input-field {
+            border: 0.5px solid rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            width: 90%;
+            padding: 10px 10px;
+            margin-top: 10px;
+            font-size: 19px;
+            width: 900px;
+        }
+        .input-field:focus{
+            outline: none;
+        }
+
+        #start-btn{
+            padding: 10px 20px;
+            color: white;
+            background: #FF6D60;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 150%;
+            border: none;
+            border-radius: 10px;
+            display: block;
+        }
+        #instructions{
+            font-style: normal;
+            font-size: 20px;
+        }
+
+        .submit-btn{
+            padding: 10px 20px;
+            color: white;
+            background: #FF6D60;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 146%;
+            border: none;
+            border-radius: 10px;
+        }
+        .submit-btn-div{
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+    <nav>
+        <div class="logo">
+            <img class="logo-img" src="./Untitled_design__2_-removebg-preview.png" alt="">
+        </div>
+        <div class="team-details">
+            <a href="" class="link">Github</a>
+            <a href="" class="link">LinkTree</a>
+        </div>
+    </nav>
+
+    <section class="main-intro">
+        <h1 class="main-intro-text">Cold Mail Generator</h1>
+        <h1 class="main-intro-desc">Cold mailing is not hectic work anymore. Elevate your cold emailing with our AI tool! Generate high level emails in seconds using voice or text commands. Streamline your outreach and achieve better results. 
+            Get started with our advanced technology today!</h1>
+    </section>
+
+    <section class="form-sec">
+        
+        <div class="form-element">
+            <label for="user-name" class="form-label">Your Name</label> <br>
+        <input type="text" name="user-name" id="user-name" class="input-field"
+            placeholder="Full Name">
+        </div>
+        <div class="form-element">
+            <label for="designation" class="form-label">Designation Applying for</label> <br>
+        <input type="text" name="designation" id="designation" class="input-field"
+            placeholder="eg. ML intern, company co-founder">
+        </div>
+        <div class="form-element">
+            <label for="current-work" class="form-label">What are you currently doing</label> <br>
+        <input type="text" name="current-work" id="current-work" class="input-field"
+            placeholder="eg. studying college or freelancing">
+        </div>
+        
+        <div class="form-element">
+            <label for="skills" class="form-label">skills</label> <br>
+        <input type="text" name="skills" id="skills" class="input-field"
+            placeholder="eg. coding(languages-python, javascript), communication, ">
+        </div>
+        <div class="form-element">
+            <label for="project" class="form-label">Describe your recent project you worked on(optional)</label> <br>
+        <input type="text" name="project" id="project" class="input-field"
+            placeholder="eg. in one-two lines">
+        </div>
+        <div class="form-element">
+            <label for="description" class="form-label">Describe about yourself(optional)</label> <br>
+        <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
+            placeholder="eg. in one-two lines"> -->
+            <textarea name="description" id="" cols="30" rows="10" class="input-field" placeholder="a brief description or a pitch"></textarea>
+        </div>
+        <div class="form-element">
+            <label for="description" class="form-label">Describe about yourself in voice(optional)</label> <br>
+        <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
+            placeholder="eg. in one-two lines"> -->
+            <textarea name="description" cols="30" rows="10" class="input-field" id="form-text" placeholder="Too lazy to type? just talk it out"></textarea>
+            <button id="start-btn">Talk!</button>
+        <p id="instructions">press the button to talk</p>
+        </div>
+        <div class="form-element">
+            <label for="gitHub" class="form-label">GitHub Link</label> <br>
+        <input type="text" name="gitHub" id="gitHub" class="input-field"
+            placeholder="https://">
+        </div>
+        <div class="form-element">
+            <label for="linkedIn" class="form-label">LinkedIn Link</label> <br>
+        <input type="text" name="linkedIn" id="linkedIn" class="input-field"
+            placeholder="https://">
+        </div>
+        <div class="form-element">
+            <label for="twitter" class="form-label">Twitter Link</label> <br>
+        <input type="text" name="twitter" id="twitter" class="input-field"
+            placeholder="https://">
+        </div>
+        <div class="form-element">
+            <label for="twitter" class="form-label">Link Tree</label> <br>
+        <input type="text" name="twitter" id="twitter" class="input-field"
+            placeholder="I know you lazy person🙂! just give your link tree">
+        </div>
+        <div class="form-element">
+            <label for="recipientName" class="form-label">Recipient's Name</label> <br>
+        <input type="text" name="recipientName" id="recipientName" class="input-field"
+            placeholder="Name of the person you're sending mail to">
+        </div>
+        <div class="form-element">
+            <label for="recipientMail" class="form-label">Recipient's Mail</label> <br>
+        <input type="text" name="recipientMail" id="recipientMail" class="input-field"
+            placeholder="Mail of the person you're sending mail to">
+        </div>
+        <div class="form-element submit-btn-div"><button type="submit" class="submit-btn">Generate Mail</button></div>
+
+    </section>
+    
+        <!-- <div class="text-area">
+            <textarea name="" id="form-text"  rows="10"></textarea>
+        </div>
+        <button id="start-btn">start</button>
+        <p id="instructions">press the start btn</p> -->
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    var speechReg = window.webkitSpeechRecognition ;
+    var reg = new speechReg();
+
+    var textBox = $('#form-text');
+    var ins = $('#instructions');
+    var content = '';
+
+    reg.continuous = true;
+
+    reg.onstart = function (){
+        ins.text('voice recognition is on');
+    }
+    reg.onspeechend = function(){
+        ins.text('no activity');
+    }
+
+    reg.onerror = function (){
+        ins.text('try again error record');
+    }
+
+    reg.onresult = function (){
+        var current = event.resultIndex;
+
+        var tranScript = event.results[current][0].transcript;
+
+        console.log(tranScript);
+        content += tranScript;
+
+        textBox.val(content);
+    }
+
+    $('#start-btn').click(function (event) {
+        if(content.length){
+            content += '';
+
+        }
+        reg.start();
+    })
+
+
+</script>
+</html>
