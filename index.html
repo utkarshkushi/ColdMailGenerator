@@ -196,62 +196,55 @@
             Get started with our advanced technology today!</h1>
     </section>
 
-    <section class="form-sec">
+    <form action="/form-respone" method="post" class="form-sec" id="form-sec">
         
         <div class="form-element">
-            <label for="user-name" class="form-label">Your Name</label> <br>
+            <label for="user-name" class="form-label">Your Name*/label> <br>
         <input type="text" name="user-name" id="user-name" class="input-field"
-            placeholder="Full Name">
+            placeholder="Full Name" required>
         </div>
         <div class="form-element">
-            <label for="designation" class="form-label">Designation Applying for</label> <br>
+            <label for="designation" class="form-label">Designation Applying for*</label> <br>
         <input type="text" name="designation" id="designation" class="input-field"
-            placeholder="eg. ML intern, company co-founder">
+            placeholder="eg. ML intern, company co-founder" required>
         </div>
         <div class="form-element">
-            <label for="current-work" class="form-label">What are you currently doing</label> <br>
+            <label for="current-work" class="form-label">What are you currently doing*</label> <br>
         <input type="text" name="current-work" id="current-work" class="input-field"
-            placeholder="eg. studying college or freelancing">
+            placeholder="eg. studying college or freelancing" required>
         </div>
         
         <div class="form-element">
-            <label for="skills" class="form-label">skills</label> <br>
+            <label for="skills" class="form-label">skills*</label> <br>
         <input type="text" name="skills" id="skills" class="input-field"
-            placeholder="eg. coding(languages-python, javascript), communication, ">
+            placeholder="eg. coding(languages-python, javascript), communication, " required>
         </div>
         <div class="form-element">
-            <label for="project" class="form-label">Describe your recent project you worked on(optional)</label> <br>
+            <label for="project" class="form-label">Describe your recent project you worked on*</label> <br>
         <input type="text" name="project" id="project" class="input-field"
-            placeholder="eg. in one-two lines">
+            placeholder="eg. in one-two lines" required>
         </div>
         <div class="form-element">
-            <label for="description" class="form-label">Describe about yourself(optional)</label> <br>
+            <label for="description" class="form-label">Describe about yourself</label> <br>
         <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
             placeholder="eg. in one-two lines"> -->
             <textarea name="description" id="" cols="30" rows="10" class="input-field" placeholder="a brief description or a pitch"></textarea>
         </div>
+       
         <div class="form-element">
-            <label for="description" class="form-label">Describe about yourself in voice(optional)</label> <br>
-        <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
-            placeholder="eg. in one-two lines"> -->
-            <textarea name="description" cols="30" rows="10" class="input-field" id="form-text" placeholder="Too lazy to type? just talk it out"></textarea>
-            <button id="start-btn">Talk!</button>
-        <p id="instructions">press the button to talk</p>
-        </div>
-        <div class="form-element">
-            <label for="gitHub" class="form-label">GitHub Link</label> <br>
+            <label for="gitHub" class="form-label">GitHub Link*</label> <br>
         <input type="text" name="gitHub" id="gitHub" class="input-field"
-            placeholder="https://">
+            placeholder="https://" required>
         </div>
         <div class="form-element">
-            <label for="linkedIn" class="form-label">LinkedIn Link</label> <br>
+            <label for="linkedIn" class="form-label">LinkedIn Link*</label> <br>
         <input type="text" name="linkedIn" id="linkedIn" class="input-field"
-            placeholder="https://">
+            placeholder="https://" required>
         </div>
         <div class="form-element">
-            <label for="twitter" class="form-label">Twitter Link</label> <br>
+            <label for="twitter" class="form-label">Twitter Link*</label> <br>
         <input type="text" name="twitter" id="twitter" class="input-field"
-            placeholder="https://">
+            placeholder="https://" required>
         </div>
         <div class="form-element">
             <label for="twitter" class="form-label">Link Tree</label> <br>
@@ -259,24 +252,68 @@
             placeholder="I know you lazy person🙂! just give your link tree">
         </div>
         <div class="form-element">
-            <label for="recipientName" class="form-label">Recipient's Name</label> <br>
+            <label for="recipientName" class="form-label">Recipient's Name*</label> <br>
         <input type="text" name="recipientName" id="recipientName" class="input-field"
-            placeholder="Name of the person you're sending mail to">
+            placeholder="Name of the person you're sending mail to" required>
         </div>
         <div class="form-element">
-            <label for="recipientMail" class="form-label">Recipient's Mail</label> <br>
+            <label for="recipientMail" class="form-label">Recipient's Mail*</label> <br>
         <input type="text" name="recipientMail" id="recipientMail" class="input-field"
-            placeholder="Mail of the person you're sending mail to">
+            placeholder="Mail of the person you're sending mail to" required>
         </div>
         <div class="form-element submit-btn-div"><button type="submit" class="submit-btn">Generate Mail</button></div>
 
-    </section>
-    
-        <!-- <div class="text-area">
-            <textarea name="" id="form-text"  rows="10"></textarea>
+    </form>
+    <div class="voice">
+        <h2 class="voice-Form-Button" onclick="openVoiceForm()">Generate using voice:</h2>
+<form action="" class="form-sec form-sec-voice" id="form-sec-voice">
+    <div class="form-element">
+        <label for="userName2" class="form-label">Your Name*</label> <br>
+    <input type="text" name="userName2" id="userName2" class="input-field"
+        placeholder="Full Name" required>
+    </div>
+        <div class="form-element">
+            <label for="description2" class="form-label">Describe about yourself in voice(optional)</label> <br>
+        <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
+            placeholder="eg. in one-two lines"> -->
+            <textarea name="description2" cols="30" rows="10" class="input-field" id="form-text2" placeholder="Too lazy to type? just talk it out"></textarea>
+            <button id="start-btn1" type="button">Talk!</button>
+        <p id="instructions">press the button to talk</p>
         </div>
-        <button id="start-btn">start</button>
-        <p id="instructions">press the start btn</p> -->
+        <div class="form-element">
+            <label for="gitHub2" class="form-label">GitHub Link</label> <br>
+        <input type="text" name="gitHub2" id="gitHub2" class="input-field"
+            placeholder="https://" required>
+        </div>
+        <div class="form-element">
+            <label for="linkedIn2" class="form-label">LinkedIn Link</label> <br>
+        <input type="text" name="linkedIn2" id="linkedIn2" class="input-field"
+            placeholder="https://" required>
+        </div>
+        <div class="form-element">
+            <label for="twitter2" class="form-label">Twitter Link</label> <br>
+        <input type="text" name="twitter2" id="twitter2" class="input-field"
+            placeholder="https://" required>
+        </div>
+        <div class="form-element">
+            <label for="linkTree2" class="form-label">Link Tree</label> <br>
+        <input type="text" name="linkTree2" id="linktree2" class="input-field"
+            placeholder="I know you lazy person🙂! just give your link tree" required>
+        </div>
+        <div class="form-element">
+            <label for="recipientName2" class="form-label">Recipient's Name</label> <br>
+        <input type="text" name="recipientName2" id="recipientName2" class="input-field"
+            placeholder="Name of the person you're sending mail to" required>
+        </div>
+        <div class="form-element">
+            <label for="recipientMail2" class="form-label">Recipient's Mail</label> <br>
+        <input type="text" name="recipientMail2" id="recipientMail2" class="input-field"
+            placeholder="Mail of the person you're sending mail to" required>
+        </div>
+        <div class="form-element submit-btn-div"><button type="submit" id="submit-btn1" class="submit-btn">Generate Mail</button></div>
+
+    </form>
+</div> 
     
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -320,6 +357,204 @@
         reg.start();
     })
 
+// Get form element
+const formSec = document.getElementById('form-sec');
+let voiceFormOpen = false;
+let voiceForm = document.getElementById('form-sec-voice');
+// Get all form elements
+const userName = document.getElementById('userName');
+const designation = document.getElementById('designation');
+const currentWork = document.getElementById('currentWork');
+const skills = document.getElementById('skills');
+const project = document.getElementById('project');
+const description = document.getElementById('description');
+const gitHub = document.getElementById('gitHub');
+const linkedIn = document.getElementById('linkedIn');
+const twitter = document.getElementById('twitter');
+const linkTree = document.getElementById('linkTree');
+const recipientName = document.getElementById('recipientName');
+const recipientMail = document.getElementById('recipientMail');
 
+// Add event listener to the form submit button
+formSec.addEventListener('submit', (event) => {
+  // Prevent default form submission
+  event.preventDefault();
+  
+  // Check if name is entered
+  if (userName.value.trim() === '') {
+    alert('Please enter your name');
+    userName.focus();
+    return;
+  }
+  
+  // Check if designation is entered
+  if (designation.value.trim() === '') {
+    alert('Please enter the designation you are applying for');
+    designation.focus();
+    return;
+  }
+  
+  // Check if current work is entered
+  if (currentWork.value.trim() === '') {
+    alert('Please enter your current work');
+    currentWork.focus();
+    return;
+  }
+  
+  // Check if skills are entered
+  if (skills.value.trim() === '') {
+    alert('Please enter your skills');
+    skills.focus();
+    return;
+  }
+  
+  // Check if recipient name is entered
+  if (recipientName.value.trim() === '') {
+    alert('Please enter recipient name');
+    recipientName.focus();
+    return;
+  }
+  
+  // Check if recipient mail is entered and valid
+  if (recipientMail.value.trim() === '') {
+    alert('Please enter recipient mail');
+    recipientMail.focus();
+    return;
+  } else {
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!recipientMail.value.trim().match(mailFormat)) {
+      alert('Please enter a valid email address');
+      recipientMail.focus();
+      return;
+    }
+  }
+  
+  // If all fields are valid, submit the form
+  formSec.submit();
+});
+
+
+function validURL(url) {
+    const pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+    return !!pattern.test(url);
+}
+
+function validEmail(email) {
+    const pattern = /^\S+@\S+\.\S+$/;
+    return pattern.test(email);
+}
+
+
+function openVoiceForm(){
+    if(!voiceFormOpen){
+        voiceForm.style.display = 'flex';
+        voiceFormOpen = true;
+    }
+    else{
+        voiceForm.style.display = 'none';
+        voiceFormOpen = false;
+    }
+
+}
+
+//get form elemt for voice
+
+const formSecVoice = document.getElementById('form-sec-voice');
+
+// Get all form elements
+const userName2 = document.getElementById('user-name2');
+// const designation2 = document.getElementById('designation2');
+// const currentWork2 = document.getElementById('current-work2');
+// const skills2 = document.getElementById('skills2');
+// const project2 = document.getElementById('project2');
+// const description2 = document.getElementById('description2');
+const gitHub2 = document.getElementById('gitHub2');
+const linkedIn2 = document.getElementById('linkedIn2');
+const twitter2 = document.getElementById('twitter2');
+const linkTree2 = document.getElementById('linkTree2');
+const recipientName2 = document.getElementById('recipientName2');
+const recipientMail2 = document.getElementById('recipientMail2');
+
+// Add event listener to the form submit button
+formSecVoice.addEventListener('submit', (event) => {
+  // Prevent default form submission
+  event.preventDefault();
+  
+  // Check if name is entered
+  if (userName2.value.trim() === '') {
+    alert('Please enter your name');
+    userName2.focus();
+    return;
+  }
+  
+  
+  
+
+  
+  // Check if skills are entered
+//   if (description2.value.trim() === '') {
+//     alert('Please enter your skills');
+//     skills2.focus();
+//     return;
+//   }
+  
+  // Check if recipient name is entered
+  if (recipientName2.value.trim() === '') {
+    alert('Please enter recipient name');
+    recipientName2.focus();
+    return;
+  }
+  
+  // Check if recipient mail is entered and valid
+  if (recipientMail2.value.trim() === '') {
+    alert('Please enter recipient mail');
+    recipientMail2.focus();
+    return;
+  } else {
+    const mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!recipientMail2.value.trim().match(mailFormat)) {
+      alert('Please enter a valid email address');
+      recipientMail2.focus();
+      return;
+    }
+  }
+  
+  // If all fields are valid, submit the form
+  formSecVoice.submit();
+});
+
+
+function validURL(url) {
+    const pattern = new RegExp('^(https?:\\/\\/)?' + // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
+    return !!pattern.test(url);
+}
+
+function validEmail(email) {
+    const pattern = /^\S+@\S+\.\S+$/;
+    return pattern.test(email);
+}
+
+
+function openVoiceForm(){
+    if(!voiceFormOpen){
+        voiceForm.style.display = 'flex';
+        voiceFormOpen = true;
+    }
+    else{
+        voiceForm.style.display = 'none';
+        voiceFormOpen = false;
+    }
+
+}
 </script>
 </html>
