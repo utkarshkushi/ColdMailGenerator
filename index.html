@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +7,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <title>Document</title>
+    <link rel="stylesheet" href="anime.css">
+    
+    <title>Cold Mail Generator</title>
     <style>
+        h2{
+            padding-left: 10%;
+        }
         body{
             margin: 0 0;
             background: #98D8AA;
@@ -152,6 +155,20 @@
             border-radius: 10px;
             display: block;
         }
+
+        #start-btn1{
+            padding: 10px 20px;
+            color: white;
+            background: #FF6D60;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 150%;
+            border: none;
+            border-radius: 10px;
+            display: block;
+        }
         #instructions{
             font-style: normal;
             font-size: 20px;
@@ -175,6 +192,98 @@
             justify-content: center;
         }
         
+        .voice-Form-Button{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 130%;
+            /* identical to box height, or 72px */
+            /* text-align: center; */
+            text-transform: capitalize;
+            display: inline;
+            color: white;
+            margin-bottom: 20px;
+            padding: 20px 30px;
+            border-radius: 20px;
+            background-color: #F7D060;
+            margin: 50px;
+            cursor: pointer;
+        }
+
+        .form-sec-voice{
+            display: none;
+        }
+        
+
+
+#loaders{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loader {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  position: relative;
+  border: 4px solid #Fff;
+  top: 50%;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
     </style>
 </head>
 <body>
@@ -182,7 +291,7 @@
 
     <nav>
         <div class="logo">
-            <img class="logo-img" src="./Untitled_design__2_-removebg-preview.png" alt="">
+            <img class="logo-img" src="/Untitled_design__2_-removebg-preview.png" alt="">
         </div>
         <div class="team-details">
             <a href="" class="link">Github</a>
@@ -196,11 +305,15 @@
             Get started with our advanced technology today!</h1>
     </section>
 
+    <div id="loaders">
+        <span id="loader"><span class="loader-inner"></span></span><!-- Loading square for squar.red network -->
+    </div>
+
     <form action="/form-respone" method="post" class="form-sec" id="form-sec">
         
         <div class="form-element">
-            <label for="user-name" class="form-label">Your Name*/label> <br>
-        <input type="text" name="user-name" id="user-name" class="input-field"
+            <label for="userName" class="form-label">Your Name*</label> <br>
+        <input type="text" name="userName" id="userName" class="input-field"
             placeholder="Full Name" required>
         </div>
         <div class="form-element">
@@ -209,8 +322,8 @@
             placeholder="eg. ML intern, company co-founder" required>
         </div>
         <div class="form-element">
-            <label for="current-work" class="form-label">What are you currently doing*</label> <br>
-        <input type="text" name="current-work" id="current-work" class="input-field"
+            <label for="currentWork" class="form-label">What are you currently doing*</label> <br>
+        <input type="text" name="currentWork" id="currentWork" class="input-field"
             placeholder="eg. studying college or freelancing" required>
         </div>
         
@@ -220,57 +333,64 @@
             placeholder="eg. coding(languages-python, javascript), communication, " required>
         </div>
         <div class="form-element">
-            <label for="project" class="form-label">Describe your recent project you worked on*</label> <br>
+            <label for="project" class="form-label">Describe your recent project you worked on(optional)</label> <br>
         <input type="text" name="project" id="project" class="input-field"
-            placeholder="eg. in one-two lines" required>
+            placeholder="eg. in one-two lines" >
         </div>
         <div class="form-element">
-            <label for="description" class="form-label">Describe about yourself</label> <br>
+            <label for="description" class="form-label">Describe about yourself(optional)</label> <br>
         <!-- <input type="text" name="primary-role" id="current-work" class="input-field"
             placeholder="eg. in one-two lines"> -->
-            <textarea name="description" id="" cols="30" rows="10" class="input-field" placeholder="a brief description or a pitch"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10" class="input-field" placeholder="a brief description or a pitch"></textarea required>
         </div>
        
         <div class="form-element">
-            <label for="gitHub" class="form-label">GitHub Link*</label> <br>
+            <label for="gitHub" class="form-label">GitHub Link</label> <br>
         <input type="text" name="gitHub" id="gitHub" class="input-field"
             placeholder="https://" required>
         </div>
         <div class="form-element">
-            <label for="linkedIn" class="form-label">LinkedIn Link*</label> <br>
+            <label for="linkedIn" class="form-label">LinkedIn Link</label> <br>
         <input type="text" name="linkedIn" id="linkedIn" class="input-field"
             placeholder="https://" required>
         </div>
         <div class="form-element">
-            <label for="twitter" class="form-label">Twitter Link*</label> <br>
+            <label for="twitter" class="form-label">Twitter Link</label> <br>
         <input type="text" name="twitter" id="twitter" class="input-field"
             placeholder="https://" required>
         </div>
         <div class="form-element">
-            <label for="twitter" class="form-label">Link Tree</label> <br>
-        <input type="text" name="twitter" id="twitter" class="input-field"
-            placeholder="I know you lazy person🙂! just give your link tree">
+            <label for="linkTree" class="form-label">Link Tree</label> <br>
+        <input type="text" name="linkTree" id="linktree" class="input-field"
+            placeholder="I know you lazy person🙂! just give your link tree" required>
         </div>
         <div class="form-element">
-            <label for="recipientName" class="form-label">Recipient's Name*</label> <br>
+            <label for="recipientName" class="form-label">Recipient's Name</label> <br>
         <input type="text" name="recipientName" id="recipientName" class="input-field"
             placeholder="Name of the person you're sending mail to" required>
         </div>
         <div class="form-element">
-            <label for="recipientMail" class="form-label">Recipient's Mail*</label> <br>
+            <label for="recipientMail" class="form-label">Recipient's Mail</label> <br>
         <input type="text" name="recipientMail" id="recipientMail" class="input-field"
             placeholder="Mail of the person you're sending mail to" required>
         </div>
-        <div class="form-element submit-btn-div"><button type="submit" class="submit-btn">Generate Mail</button></div>
+        <div class="form-element submit-btn-div"><button type="submit" id="submit-btn" class="submit-btn">Generate Mail</button></div>
 
     </form>
-    <div class="voice">
-        <h2 class="voice-Form-Button" onclick="openVoiceForm()">Generate using voice:</h2>
-<form action="" class="form-sec form-sec-voice" id="form-sec-voice">
+    
+
+     <div class="voice">
+        <h2 class="voice-Form-Button" id="voice-btn" onclick="openVoiceForm()">Generate using voice:</h2>
+<form action="/form-response-voice" method="post" class="form-sec form-sec-voice" id="form-sec-voice">
     <div class="form-element">
         <label for="userName2" class="form-label">Your Name*</label> <br>
     <input type="text" name="userName2" id="userName2" class="input-field"
         placeholder="Full Name" required>
+    </div>
+    <div class="form-element">
+        <label for="designation2" class="form-label">Designation Applying for*</label> <br>
+    <input type="text" name="designation2" id="designation2" class="input-field"
+        placeholder="eg. ML intern, company co-founder" required>
     </div>
         <div class="form-element">
             <label for="description2" class="form-label">Describe about yourself in voice(optional)</label> <br>
@@ -313,15 +433,14 @@
         <div class="form-element submit-btn-div"><button type="submit" id="submit-btn1" class="submit-btn">Generate Mail</button></div>
 
     </form>
-</div> 
-    
+</div>  
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script>
     var speechReg = window.webkitSpeechRecognition ;
     var reg = new speechReg();
 
-    var textBox = $('#form-text');
+    var textBox = $('#form-text2');
     var ins = $('#instructions');
     var content = '';
 
@@ -349,7 +468,7 @@
         textBox.val(content);
     }
 
-    $('#start-btn').click(function (event) {
+    $('#start-btn1').click(function (event) {
         if(content.length){
             content += '';
 
@@ -357,6 +476,11 @@
         reg.start();
     })
 
+
+
+//     
+const loaders = document.getElementById("loaders");
+loaders.style.display = "none";
 // Get form element
 const formSec = document.getElementById('form-sec');
 let voiceFormOpen = false;
@@ -467,7 +591,7 @@ function openVoiceForm(){
 const formSecVoice = document.getElementById('form-sec-voice');
 
 // Get all form elements
-const userName2 = document.getElementById('user-name2');
+const userName2 = document.getElementById('userName2');
 // const designation2 = document.getElementById('designation2');
 // const currentWork2 = document.getElementById('current-work2');
 // const skills2 = document.getElementById('skills2');
@@ -556,5 +680,24 @@ function openVoiceForm(){
     }
 
 }
+const submitBtn = document.getElementById("submit-btn");
+const formSex = document.getElementById('form-sec');
+
+const voiceBtn = document.getElementById('voice-btn');
+formSex.addEventListener('submit', (event) => {
+    formSec.style.display = "none";
+    formSecVoice.style.display = "none";
+    voiceBtn.style.display = "none";
+    loaders.style.display = "flex";
+})
+
+formSecVoice.addEventListener('submit', (event)=>{
+    formSec.style.display = "none";
+    formSecVoice.style.display = "none";
+    voiceBtn.style.display = "none";
+    loaders.style.display = "flex";
+})
+    
 </script>
 </html>
+

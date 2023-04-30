@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Cold Mail Generator</title>
+    <style>
+        body{
+            margin: 0 0;
+            background: #98D8AA;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-middle-box{
+            width: 500px;
+            height: 400px;
+            background: white;
+            border-radius: 20px;
+        }
+        .main-middle-box-text{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 130%;
+            /* identical to box height, or 72px */
+            text-align: center;
+            text-transform: capitalize;
+            transition-timing-function: ease-in;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .image-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="main-middle-box">
+        <h1 class="main-middle-box-text">Send the Mail</h1>
+        <div class="image-box">
+            <img src="/mail.png" alt="">
+        </div>
+    </div>
+    <% let name = mailDetails.userName
+        let subject = mailDetails.subject
+        let text = (mailDetails.text).replace(/[\r\n]/gm, '')
+        let gitHub = mailDetails.gitHub
+        let linkedIn = mailDetails.linkedIn
+        let twitter = mailDetails.twitter
+        let linkTree = mailDetails.linkTree
+        let recipientName = mailDetails.recipientName
+        let recipientMail = mailDetails.recipientMail
+    
+    %>
+    <script>
+        // window.mailDetails = JSON.parse('<%- JSON.stringify(mailDetails) %>');
+        let dName = '<%- name %>';
+        let dSubject = '<%- subject %>';
+        let dText = '<%- text %>';
+        let dGitHub= '<%- gitHub %>';
+        let dLinkedIn = '<%- linkedIn %>';
+        let dTwitter = '<%- twitter %>';
+        let dLinkTree = '<%- linkTree %>';
+        let dRecipientName = '<%- recipientName %>';
+        let dRecipientMail= '<%- recipientMail %>';
+        
+
+        let message = `Hello ${dRecipientName}\n\n${dText}\nBelow are my profile links\nGitHub - ${dGitHub}\nLinkedIn - ${dLinkedIn}\nTwitter - ${dTwitter}\nLink Tree - ${dLinkTree}\nThanking You\n${dName}`;
+        console.log(message);
+        const mailLink = `mailto:${dRecipientMail}?subject=${encodeURIComponent(dSubject)}&body=${encodeURIComponent(message)}`;
+         window.location.href = mailLink;
+    </script>
+</body>
+</html>
+
